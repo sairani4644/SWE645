@@ -1,0 +1,167 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--External CSS page -->
+    <link rel="stylesheet" href="survey-styles.css">
+    <!--Bootstrap for CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Container-->
+    <div class="container surveyPage">
+        <!--Title of the webpage-->
+        <h1 id="title">Survey Form</h1>
+        <p id="description">----Please fill in the information----</p>
+         <!-- we denote the feilds which are mandotary by * symbol-->
+        <h3><span class="required">*</span> Denotes mandatory</h3>
+        <form id="survey-form" method="POST">
+            <div id="borders">
+                <!--input feild for username-->
+                <label id="name-label">Username <span class="required">*</span></label><br>
+                <input id="name" type="text" name="full_name" placeholder="Sai Rani Gangavarapu" autofocus="autofocus"
+                    value="" required><br>
+            </div>
+            <div id="borders"> 
+                <!-- input feild for email-->
+                <label id="email-label">Email <span class="required">*</span></label>
+                <p id="description">Please provide a valid email, in case we need to contact you by email.</p>
+                <input id="email" type="email" name="email" placeholder="sairani.g@gmail.com" required><br>
+            </div>
+            <div id="borders">
+                <!-- input feild for street address-->
+                <label id="address-type">Street address <span class="required">*</span></label><br>
+                <input type="text" id="street_address" name="street_address" placeholder="11100 Cavalier court"
+                    required>
+            </div>
+            <div id="borders">
+                <!--input feild for city-->
+                <label id="city-label">City <span class="required">*</span></label><br>
+                <input type="text" id="city" name="city" placeholder="Fairfax" required>
+            </div>
+            <div id="borders">
+                <!--input feild for state-->
+                <label id="state-label">State <span class="required">*</span></label><br>
+                <input type="text" id="state" name="state" placeholder="Virginia" required>
+                </s><br>
+            </div>
+            <div id="borders">
+                <!--input feild for zip code-->
+                <label id="zipcode-label">zipcode <span class="required">*</span></label><br>
+                <input type="text" id="zipcode" name="zipcode" placeholder="22030" required>
+            </div>
+            <div id="borders">
+                <!--input feild for telephone number-->
+                <label id="telephone">Telephone number <span class="required">*</span></label><br>
+                <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" placeholder="7512411563" required>
+            </div>
+            <div id="borders">
+                
+                <label id="URL">URL <span class="required">*</span></label><br>
+                <input type="URL" id="URL" name="URL" placeholder=ex:"https://amazon.com" required>
+            </div>
+            <div id="borders">
+                <!--input feild for the date of survey-->
+                <label for="number">Date of Survey <span class="required">*</span></label><br>
+                <input type="date" id="date-survey" name="date-survey" placeholder="Enter the date" required>
+            </div>
+            <div id="borders">
+                <!--Checkboxes for campus liked-->
+                <label id="feed">What you liked most in the campus?</label> <br>
+                <input id="Students" name="" value="Students" type="checkbox">
+                <label for="Students">Students </label><br>
+                <input id="location" name="" value="location" type="checkbox">
+                <label for="location">Location</label><br>
+                <input id="campus" value="campus" name="" type="checkbox">
+                <label for="campus">campus</label><br>
+                <input id="atmosphere" value="atmosphere" name="" type="checkbox">
+                <label for="atmosphere">atmosphere</label><br>
+                <input id="dorm-rooms" value="dorm-rooms" name="" type="checkbox">
+                <label for="dorm-rooms">dorm-rooms</label><br>
+                <input id="sports" value="sports" name="" type="checkbox">
+                <label for="sports">sports</label><br>
+                Other:<input id="other" type="text" name="" value=""><br>
+            </div>
+            <div id="borders">
+                <!--Radio for interest in university-->
+                <label id="recomm"> How did you become interested in this university? </label><br>
+                <input type="radio" id="Choice1" name="radio-buttons" value="Friends">
+                <label for="Choice1">Friends</label> <br>
+
+                <input type="radio" id="Choice2" name="radio-buttons" value="Internet">
+                <label for="Choice2">Internet</label><br>
+
+                <input type="radio" id="Choice3" name="radio-buttons" value="Television">
+                <label for="Choice3">Television</label><br>
+
+                <input type="radio" id="Choice4" name="radio-buttons" value="others">
+                <label for="Choice4">others</label>
+            </div>
+            <div id="borders">
+                <!--Graduation month-->
+                <label for="GraduationMonth">GraduationMonth:</label>
+                <input list="graduationMonths" id="GraduationMonth" name="GraduationMonth">
+                <datalist id="graduationMonths">
+                    <option value="January">
+                    <option value="February">
+                    <option value="March">
+                    <option value="April">
+                    <option value="May">
+                    <option value="June">
+                    <option value="July">
+                    <option value="August">
+                    <option value="September">
+                    <option value="October">
+                    <option value="November">
+                    <option value="December">
+                </datalist>
+            </div>
+            <div id="borders">
+                <label for="Gradyear">GraduationYear <span class="required">*</span></label><br>
+                <input type="text" id="GraduationYear" name="GraduationYear" required>
+            </div>
+            <div id="borders">
+                <label id="recomm"> Likelihood of him/her recommending this school to other prospective students?
+                </label><br>
+                <input type="radio" id="Choice1" name="radio-buttons" value="Unlikely">
+                <label for="Choice1">Unlikely</label> <br>
+
+                <input type="radio" id="Choice2" name="radio-buttons" value="Likely">
+                <label for="Choice2">Likely</label><br>
+
+                <input type="radio" id="Choice3" name="radio-buttons" value="Very Likely">
+                <label for="Choice3">Very Likely</label><br>
+            </div>
+
+            <div class="container">
+                <h2>Raffle Ticket</h2>
+                <form onsubmit="return checkRaffle()">
+                    <div class="form-group">
+                        <label for="raffle">Enter at least ten comma-separated numbers from 1-100:</label>
+                        <input type="text" id="raffle" name="raffle" placeholder=" ">
+                    </div>
+                    <button type="submit">Free Movie Ticket</button>
+                    <p id="result"></p>
+                </form>
+            </div>
+            
+            <div id="borders">
+                <!-- to include additional comments-->
+                <label id="add-comm">Additional Comments:</label><br>
+                <textarea type="text" placeholder="your comment....."></textarea><br>
+
+                <div>
+                    <button id="submit" type="submit" class="btn btn-large btn-primary" name="submit">Sumbit</button>
+                    <button id="cancel" type="cancel" class="btn btn-large btn-primary" name="cancel">Cancel</button>
+                </div>
+        </form>
+    </div>
+</body>
+
+</html>
